@@ -43,3 +43,18 @@ def encrypt(text):
             encrypted += "? "
 
     return encrypted.strip()
+
+def decrypt(morse_code): 
+    morse_code = morse_code.strip()
+    symbols = morse_code.split(" ")
+
+    decrypted = ""
+
+    for symbol in symbols:
+        if symbol in reverse_morse_dict:
+            decrypted += reverse_morse_dict[symbol]
+        else:
+            decrypted += "?"
+
+    return decrypted 
+
