@@ -117,3 +117,6 @@ morse_dict = {
     '9': '----.',
     ' ': '/'
 }
+reverse_morse_dict = {value: key for key, value in morse_dict.items()}
+def format_text(text):
+    return text.strip().upper()
