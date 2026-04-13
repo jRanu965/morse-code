@@ -58,3 +58,20 @@ def decrypt(morse_code):
 
     return decrypted 
 
+def main():
+    print("=== Morse Code Program ===")
+
+    choice = input("Encrypt (E) or Decrypt (D)? ").strip().upper()
+
+    if choice == 'E':
+        message = input("Enter message: ")
+        result = encrypt(message)
+        print(result)
+
+    elif choice == 'D':
+        message = input("Enter Morse code: ")
+        result = decrypt(message)
+        print(result)
+
+    else:
+        print("Invalid choice.")  
