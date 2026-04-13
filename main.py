@@ -20,3 +20,11 @@ def main():
     print("Morse Code Program Starting...")
 
 main() 
+
+morse_dict = {
+    'A': '.-', 'B': '-...', 'C': '-.-.',
+    'D': '-..', 'E': '.', 'F': '..-.',
+    'G': '--.', 'H': '....', 'I': '..',
+    ' ': '/'
+}
+
