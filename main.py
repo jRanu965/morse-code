@@ -28,3 +28,4 @@ morse_dict = {
     ' ': '/'
 }
 
+reverse_morse_dict = {value: key for key, value in morse_dict.items()}
