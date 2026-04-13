@@ -74,4 +74,28 @@ def main():
         print(result)
 
     else:
-        print("Invalid choice.")  
+        print("Invalid choice.")
+        
+def main():
+    print("==============================")
+    print(" MORSE CODE ENCRYPTOR/DECODER ")
+    print("==============================")
+
+    choice = input("Encrypt (E) or Decrypt (D)? ").strip().upper()
+
+    if choice == 'E':
+        message = input("Enter message: ")
+        result = encrypt(message)
+
+        print("\nEncrypted Message:")
+        print(result)
+
+    elif choice == 'D':
+        message = input("Enter Morse code: ")
+        result = decrypt(message)
+
+        print("\nDecrypted Message:")
+        print(result)
+
+    else:
+        print("Invalid choice.") 
