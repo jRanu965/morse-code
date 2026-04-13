@@ -120,3 +120,15 @@ morse_dict = {
 reverse_morse_dict = {value: key for key, value in morse_dict.items()}
 def format_text(text):
     return text.strip().upper()
+def encrypt(text):
+    text = format_text(text)
+    encrypted = ""
+
+    for char in text:
+        if char in morse_dict:
+            encrypted += morse_dict[char] + " "
+        else:
+            encrypted += "? "
+
+    return encrypted.strip()
+
