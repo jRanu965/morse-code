@@ -99,3 +99,7 @@ def main():
 
     else:
         print("Invalid choice.") 
+
+        if choice not in ['E', 'D']:
+            print("Please enter only E or D.")
+    return
