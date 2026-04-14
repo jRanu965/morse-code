@@ -1,9 +1,5 @@
 # Morse Code Encryptor / Decryptor
 
-def main():
-    print("Morse Code Program Starting...") 
-
-main() 
 # 1. Morse dictionary 
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..',
