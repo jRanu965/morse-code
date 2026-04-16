@@ -1,6 +1,6 @@
 # Morse Code Encryptor / Decryptor
 
-# 1. Morse dictionary 
+# 1. Morse dictionary
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..',
     'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
@@ -17,7 +17,7 @@ morse_dict = {
 }
 
 # 2. Reverse dictionary
-reverse_morse_dict = {value: key for key, value in morse_dict.items()}
+reverse_morse_dict = {v: k for k, v in morse_dict.items()}
 
 # 3. Format input
 def format_text(text):
@@ -26,30 +26,28 @@ def format_text(text):
 # 4. Encrypt function
 def encrypt(text):
     text = format_text(text)
-    encrypted = ""
+    result = []
 
     for char in text:
         if char in morse_dict:
-            encrypted += morse_dict[char] + " "
+            result.append(morse_dict[char])
         else:
-            encrypted += "? "
+            result.append("?")
 
-    return encrypted.strip()
+    return " ".join(result)
 
 # 5. Decrypt function
 def decrypt(morse_code):
-    morse_code = morse_code.strip()
-    symbols = morse_code.split(" ")
-
-    decrypted = ""
+    symbols = morse_code.strip().split()
+    result = []
 
     for symbol in symbols:
         if symbol in reverse_morse_dict:
-            decrypted += reverse_morse_dict[symbol]
+            result.append(reverse_morse_dict[symbol])
         else:
-            decrypted += "?"
+            result.append("?")
 
-    return decrypted
+    return "".join(result)
 
 # 6. Main program
 def main():
@@ -79,4 +77,4 @@ def main():
 
 # 7. Run program
 if __name__ == "__main__":
-    main()
+    main() 
