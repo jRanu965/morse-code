@@ -17,7 +17,7 @@ morse_dict = {
 }
 
 # 2. Reverse dictionary
-reverse_morse_dict = {v: k for k, v in morse_dict.items()}
+reverse_morse_dict = {v: k for k, v in morse_dict.items()} 
 
 # 3. Format input
 def format_text(text):
@@ -77,4 +77,4 @@ def main():
 
 # 7. Run program
 if __name__ == "__main__":
-    main() 
+           main() 
